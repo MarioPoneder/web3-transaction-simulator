@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MarioPoneder/Web3-transaction-simulator/issues"
   },
-  "homepage": "https://github.com/MarioPoneder/Web3-transaction-simulator#readme"
+  "homepage": "https://github.com/MarioPoneder/Web3-transaction-simulator#readme",
+  "dependencies": {
+    "hardhat": "^2.12.2"
+  }
 }
