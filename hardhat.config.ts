@@ -6,7 +6,7 @@ import { resolve } from "path";
 dotenvConfig({ path: resolve(__dirname, "./.env") });
 
 // Ensure that we have all the environment variables we need.
-const networkChainId: number | undefined = process.env.NETWORK_CHAIN_ID;
+const networkChainId: string | undefined = process.env.NETWORK_CHAIN_ID;
 if (!networkChainId) {
   throw new Error("Please set your NETWORK_CHAIN_ID in a .env file");
 }
