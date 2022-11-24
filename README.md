@@ -4,7 +4,7 @@ Compatible and tested with [MetaMask](https://metamask.io/), but should work wit
 
 ## Motivation behind this project
 Have you ever sent funds or interacted with a DApp / smart contract using a Web3 wallet?  
-Then you know then uneasy feeling when you are about to sign a transaction and worry if the data you provided is correct or
+Then you know the uneasy feeling when you are about to sign a transaction and worry if the data you provided is correct or
 the target smart contract behaves as expected.  
 Even if there is no risk of losing funds involved, failed transactions still cost gas!  
 
@@ -19,7 +19,7 @@ Simulating a transaction can be broken down into the following steps:
 ## Prerequisites
 
 ### Install dependencies
-Assuming you have [Node.js](https://nodejs.org) installed, run the following command to install to require packages including Hardhat:
+Assuming you have [Node.js](https://nodejs.org) installed, run the following command to install the require packages including Hardhat:
 ```sh
 $ npm install
 ```
