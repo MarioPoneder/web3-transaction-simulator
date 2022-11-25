@@ -19,7 +19,7 @@ Simulating a transaction can be broken down into the following steps:
 ## Prerequisites
 
 ### Install dependencies
-Assuming you have [Node.js](https://nodejs.org) installed, run the following command to install the require packages including Hardhat:
+Assuming you have [Node.js](https://nodejs.org) installed, run the following command to install the required packages including Hardhat:
 ```sh
 $ npm install
 ```
