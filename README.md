@@ -12,14 +12,14 @@ As a result of the above reasons, I wanted to create a possibility simulate and 
 
 ## How does it work?
 Simulating a transaction can be broken down into the following steps:
-1. Start a local [Hardhat](https://github.com/NomicFoundation/hardhat) network instance which forks the current state of the mainnet.
+1. Start a local [Accelerated Hardhat](https://github.com/MarioPoneder/accelerated-hardhat) network instance which forks the current state of the mainnet.
 2. Redirect your Web3 wallet to your local simulator node at `http://localhost:8545` (RPC URL).
 3. Execute the transaction and review the outcomes.
 
 ## Prerequisites
 
 ### Install dependencies
-Assuming you have [Node.js](https://nodejs.org) installed, run the following command to install the required packages including Hardhat:
+Assuming you have [Node.js](https://nodejs.org) installed, run the following command to install the required packages including [Accelerated Hardhat](https://github.com/MarioPoneder/accelerated-hardhat):
 ```sh
 $ npm install
 ```
@@ -42,6 +42,18 @@ Manually add your local simulator network instance to your Web3 wallet using the
 
 _Note that MetaMask already comes with a **Localhost 8548** network preset which can be used, but make sure the **Chain ID** is set accordingly._
 
+### Optional: Test account
+
+In case you do not want to test transactions with you own account(s), the simulator node comes with a test account which is pre-funded with **100 ETH**.  
+To use it, import the following account into your Web3 wallet:
+
+| Property        | Value                                                                |
+|-----------------|----------------------------------------------------------------------|
+| Account address |                         `0xdD11751cdD3f6EFf01B1f6151B640685bfa5dB4a` |
+| Private key     | `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff81` |
+
+_Note that this is a publicly known private key and therefore should only be used in local testing environments._
+
 ## Usage
 
 1. Start your local simulator node by running the following command to get the most recent state of your target network:
@@ -49,3 +61,4 @@ _Note that MetaMask already comes with a **Localhost 8548** network preset which
 $ npm start
 ```
 2. Switch to your simulator network instance in your Web3 wallet and proceed with the transactions you want to test.
+
