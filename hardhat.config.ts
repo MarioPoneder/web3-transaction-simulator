@@ -1,4 +1,4 @@
-import { HardhatUserConfig } from "hardhat/config";
+import { HardhatUserConfig } from "accelerated-hardhat/config";
 import { config as dotenvConfig } from "dotenv";
 import { resolve } from "path";
 
@@ -16,7 +16,6 @@ if (!networkJsonRpcUrl) {
   throw new Error("Please set your NETWORK_JSON_RPC_URL in a .env file");
 }
 
-
 const config: HardhatUserConfig = {
   networks: {
     hardhat: {
@@ -25,8 +24,7 @@ const config: HardhatUserConfig = {
         { privateKey: "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff81", balance: "100000000000000000000" }
       ],
       mining: {
-        auto: false,
-        interval: [ 12000, 13000]
+        auto: true,
       },
       chainId: +networkChainId,
       forking: {
