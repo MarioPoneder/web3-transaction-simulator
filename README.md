@@ -1,7 +1,11 @@
-# Web3 Transaction Simulator [![Open in Gitpod][gitpod-badge]][gitpod]
+# Web3 Transaction Simulator [![Open in Gitpod][gitpod-badge]][gitpod] [![Hardhat][hardhat-badge]][hardhat] [![License: MIT][license-badge]][license]
 
 [gitpod]: https://gitpod.io/#https://github.com/MarioPoneder/web3-transaction-simulator
 [gitpod-badge]: https://img.shields.io/badge/Gitpod-Open%20in%20Gitpod-FFB45B?logo=gitpod
+[hardhat]: https://www.npmjs.com/package/accelerated-hardhat
+[hardhat-badge]: https://img.shields.io/badge/Built%20with-Hardhat-FFDB1C.svg
+[license]: https://opensource.org/licenses/MIT
+[license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
 Simulate a transaction on the current state of the Ethereum mainnet or any other EVM based network and view the outcomes.  
 Compatible and tested with [MetaMask](https://metamask.io/), but should work with any Web3 wallet that lets you add a custom network (RPC URL).
@@ -16,7 +20,7 @@ As a result of the above reasons, I wanted to create a possibility simulate and 
 
 ## How does it work?
 Simulating a transaction can be broken down into the following steps:
-1. Start a [Accelerated Hardhat](https://github.com/MarioPoneder/accelerated-hardhat) network instance which forks the current state of the mainnet.
+1. Start an [Accelerated Hardhat](https://github.com/MarioPoneder/accelerated-hardhat) network instance which forks the current state of the mainnet.
 2. Redirect your Web3 wallet to your simulator node at `http://localhost:8545` (RPC URL).
 3. Execute the transaction and review the outcomes.
 
@@ -28,7 +32,7 @@ Why bother with installing Node.js and further dependencies when you can just ru
 2. Set up the `.env` file, see [Web3 API, which network do you want to fork?](#web3-api-which-network-do-you-want-to-fork)
 3. In in the Terminal tab: run with `npm start`
 4. Switch to the Ports tab: click on "Copy URL" (should be something like https://8545-marioponede-web3transac-g10ktz7lo5e.ws-eu80.gitpod.io) and "Make public"
-5. Proceed with the [Web3 wallet setup](#web3-wallet-setup) but use the above RPC URL instead of `http://localhost:8545`
+5. Proceed with the [Web3 wallet setup](#web3-wallet-setup) but use the copied RPC URL instead of `http://localhost:8545`
 6. Enjoy!
 
 ## Prerequisites
@@ -90,5 +94,5 @@ All in all, performance is sacrificed for the convenience of not having to run a
 ### Complex DApps
 
 Keep in mind, that the state of your simulator is pinned at a recent block of the target network. This means that e.g. oracle data is frozen and does not change over time.
-Usually this is not a problem when interacting with contracts directly or when using simple DApps like [Uniswap](https://app.uniswap.org).  
+Usually this is not a problem when interacting with contracts directly or when using simple DApps like [Uniswap](https://app.uniswap.org) (tested).  
 However, there are more complex DApps which do not solely rely on on-chain data from your simulator node, but also interact with the target network directly via their backend. This can lead to problems and unexpected behavior due to the state discrepancy between the simulation and the real network state.
