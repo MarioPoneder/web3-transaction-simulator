@@ -62,3 +62,18 @@ $ npm start
 ```
 2. Switch to your simulator network instance in your Web3 wallet and proceed with the transactions you want to test.
 
+## Limitations
+
+Although some user experience limitations have been overcome using an [accelerated version of Hardhat](https://github.com/MarioPoneder/accelerated-hardhat)
+which comes with changes to the Hardhat network including RPC reduction, block independent on-disk contract caching, flexible transaction nonces and blocking of costly on-chain read operations, the issues below need to be considered when working with a local simulator node.
+
+### Performance
+
+The local simulator instance is as lightweight as it gets. This means that there is no need to download gigabytes of blockchain data since only the required data (balances, contracts, storage) is requested on-the-fly using the *JSON RPC URL* you specified. However, this also affects contract execution because each call and storage read operation needs to be resolved via RPCs too.  
+All in all, performance is sacrificed for the convenience of not having to run a full node.
+
+### Complex DApps
+
+Keep in mind, that the state of your simulator is pinned at a recent block of the target network. This means that e.g. oracle data is frozen and does not change over time.
+Usually this is not a problem when interacting with contracts directly or when using simple DApps like [Uniswap](https://app.uniswap.org).  
+However, there are more complex DApps which do not solely rely on on-chain data from your simulator node, but also interact with the target network directly via their backend. This can lead to problems and unexpected behavior due to the state discrepancy between the simulation and the real network state.
