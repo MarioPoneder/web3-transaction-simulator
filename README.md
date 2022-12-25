@@ -20,6 +20,17 @@ Simulating a transaction can be broken down into the following steps:
 2. Redirect your Web3 wallet to your simulator node at `http://localhost:8545` (RPC URL).
 3. Execute the transaction and review the outcomes.
 
+## Usage with [GitPod](https://gitpod.io)
+
+Why bother with installing Node.js and further dependencies when you can just run this project online with one click?  
+
+1. [![Open in Gitpod][gitpod-badge]][gitpod]
+2. Set up the `.env` file, see [Web3 API, which network do you want to fork?](#web3-api-which-network-do-you-want-to-fork)
+3. In in the Terminal tab: run with `npm start`
+4. Switch to the Ports tab: click on "Copy URL" (should be something like https://8545-marioponede-web3transac-g10ktz7lo5e.ws-eu80.gitpod.io) and "Make public"
+5. Proceed with the [Web3 wallet setup](#web3-wallet-setup) but use the above RPC URL instead of `http://localhost:8545`
+6. Enjoy!
+
 ## Prerequisites
 
 ### Install dependencies
@@ -65,17 +76,6 @@ _Note that this is a publicly known private key and therefore should only be use
 $ npm start
 ```
 2. Switch to your simulator network instance in your Web3 wallet and proceed with the transactions you want to test.
-
-## Usage with [GitPod](https://gitpod.io)
-
-Why bother with installing Node.js and further dependencies when you can just run this project online with one click?  
-
-1. [![Open in Gitpod][gitpod-badge]][gitpod]
-2. Set up the `.env` file, see [Web3 API, which network do you want to fork?](#web3-api-which-network-do-you-want-to-fork)
-3. In in the Terminal tab: run with `npm start`
-4. Switch to the Ports tab: click on "Copy URL" (should be something like https://8545-marioponede-web3transac-g10ktz7lo5e.ws-eu80.gitpod.io) and "Make public"
-5. Proceed with the [Web3 wallet setup](#web3-wallet-setup) but use the above RPC URL instead of `http://localhost:8545`
-6. Enjoy!
 
 ## Limitations
 
