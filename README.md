@@ -29,9 +29,9 @@ Simulating a transaction can be broken down into the following steps:
 Why bother with installing Node.js and further dependencies when you can just run this project online with one click?  
 
 1. [![Open in Gitpod][gitpod-badge]][gitpod]
-2. Set up the `.env` file, see [Web3 API, which network do you want to fork?](#web3-api-which-network-do-you-want-to-fork)
-3. In in the Terminal tab: run with `npm start`
-4. Switch to the Ports tab: click on "Copy URL" (should be something like https://8545-marioponede-web3transac-g10ktz7lo5e.ws-eu80.gitpod.io) and "Make public"
+2. When not using ETH mainnet: set up the `.env` file, see [Web3 API, which network do you want to fork?](#web3-api-which-network-do-you-want-to-fork)
+3. When not using ETH mainnet: in in the Terminal tab, run with `npm start`
+4. Switch to the Ports tab, click on "Copy URL" (should be something like https://8545-marioponede-web3transac-g10ktz7lo5e.ws-eu80.gitpod.io) and "Make public"
 5. Proceed with the [Web3 wallet setup](#web3-wallet-setup) but use the copied RPC URL instead of `http://localhost:8545`
 6. Enjoy!
 
