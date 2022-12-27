@@ -33,6 +33,13 @@ const isMobile = () => {
   return check;
 };
 
+const chainId = '0x01';
+const rpcURL = 'http://localhost:8545';
+const networkName = 'Transaction Simulator';
+const currencyName = 'ETH';
+const currencySymbol = 'ETH';
+const explorerURL = '';
+
 connectButton.addEventListener("click", () => {
   if (typeof window.ethereum !== "undefined") {
     startLoading();
@@ -43,6 +50,36 @@ connectButton.addEventListener("click", () => {
         const account = accounts[0];
 
         walletID.innerHTML = `Wallet connected: <span>${account}</span>`;
+
+        //stopLoading();
+      })
+      .catch((error) => {
+        console.log(error, error.code);
+
+        alert(error.code);
+        stopLoading();
+      });
+
+    ethereum
+      .request({
+        method: "wallet_addEthereumChain",
+        params: [
+          {
+            chainId: chainId,
+            chainName: networkName,
+            rpcUrls: [rpcURL],
+            blockExplorerUrls: [explorerURL],
+
+            nativeCurrency: {
+              name: currencyName,
+              symbol: currencySymbol,
+              decimals: 18,
+            },
+          },
+        ],
+      })
+      .then(() => {
+        walletID.innerHTML = `Network added: <span>${rpcURL}</span>`;
 
         stopLoading();
       })
