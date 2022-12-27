@@ -33,8 +33,10 @@ const isMobile = () => {
   return check;
 };
 
+const urlParams = new URLSearchParams(window.location.search);
+
 const chainId = '0x1';
-const rpcURL = 'http://localhost:8545';
+const rpcURL = urlParams.get('rpcUrl') || 'http://localhost:8545';
 const networkName = 'Transaction Simulator';
 const currencyName = 'ETH';
 const currencySymbol = 'ETH';
