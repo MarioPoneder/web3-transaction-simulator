@@ -38,7 +38,6 @@ const rpcURL = 'http://localhost:8545';
 const networkName = 'Transaction Simulator';
 const currencyName = 'ETH';
 const currencySymbol = 'ETH';
-const explorerURL = '';
 
 connectButton.addEventListener("click", () => {
   if (typeof window.ethereum !== "undefined") {
@@ -68,7 +67,6 @@ connectButton.addEventListener("click", () => {
             chainId: chainId,
             chainName: networkName,
             rpcUrls: [rpcURL],
-            blockExplorerUrls: [explorerURL],
 
             nativeCurrency: {
               name: currencyName,
